@@ -9,7 +9,7 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
 def index():
     return '<h1>Welcome To The Analyzer</h1>'
 
