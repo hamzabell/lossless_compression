@@ -9,8 +9,13 @@ import os
 
 app = Flask(__name__)
 
-
 @app.route('/', methods=['POST'])
+def index():
+    return '<h1>Welcome To The Analyzer</h1>'
+
+
+
+@app.route('/compress', methods=['POST'])
 def upload_file():
     f = request.files['file']
     tag = request.form['tag']
